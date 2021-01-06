@@ -1,11 +1,11 @@
 import subprocess
-from language2test_api.extensions import db, ma
-from language2test_api import models, providers, language2test_factory
+from flask_seed_api.extensions import db, ma
+from flask_seed_api import models, providers, flask_seed_factory
 import glob
 import importlib
 import os
 
-app = language2test_factory.create_app(__name__)
+app = flask_seed_factory.create_app(__name__)
 
 def is_python_script(name):
     return '.py' in name
